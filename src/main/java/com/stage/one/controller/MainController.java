@@ -17,10 +17,9 @@ import com.stage.one.model.ModelClass;
 @RestController
 public class MainController {
 	
-	private ModelClass modelClass;
+	private ModelClass modelClass = new ModelClass();
 	
 	
-
 		
 	/**
 	 * @param modelClass
@@ -37,9 +36,16 @@ public class MainController {
 	@ResponseBody
 	public  String showModel(Model model) {
 		
+		modelClass.setAge(26);
+		modelClass.setSlackUsername("Thiza");
+		modelClass.setBackend(true);
+		modelClass.setBio("\"A tech-head that speaks fluent java,\"\n"
+				+ "			+ \"Im an easy-going guy with very strong work ethics.\"");
+		
 		model.addAttribute("view",modelClass);
 		
-		return modelClass.toString();
+		return "slackUsername:"+modelClass.getSlackUsername()+","+"backend:"+modelClass.isBackend()+
+				","+ "age:"+modelClass.getAge()+","+"bio:"+modelClass.getBio();
 	}
 
 }
