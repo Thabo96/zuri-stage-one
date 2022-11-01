@@ -12,11 +12,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ModelClass {
 
-	private String slackUsername = "\"Thiza\"";
+	private String slackUsername = "Thiza";
 	private boolean backend = true;
 	private int age = 26;
-	private String bio = "\"A tech-head that speaks fluent java,"
-			+ "Im an easy-going guy with very strong work ethics.\"";
+	private String bio = "A tech-head that speaks fluent java,"
+			+ "Im an easy-going guy with very strong work ethics.";
 	
 	
 	
