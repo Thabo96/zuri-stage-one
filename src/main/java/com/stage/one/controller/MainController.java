@@ -36,16 +36,9 @@ public class MainController {
 	@ResponseBody
 	public  String showModel(Model model) {
 		
-		modelClass.setAge(26);
-		modelClass.setSlackUsername("Thiza");
-		modelClass.setBackend(true);
-		modelClass.setBio("\"A tech-head that speaks fluent java,\"\n"
-				+ "			+ \"Im an easy-going guy with very strong work ethics.\"");
-		
 		model.addAttribute("view",modelClass);
 		
-		return "slackUsername:"+modelClass.getSlackUsername()+","+"backend:"+modelClass.isBackend()+
-				","+ "age:"+modelClass.getAge()+","+"bio:"+modelClass.getBio();
+		return modelClass.showData();
 	}
 
 }
