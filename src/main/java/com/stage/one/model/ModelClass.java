@@ -21,8 +21,8 @@ public class ModelClass {
 	
 	
 	public String showData() {
-		return "\"slackUsername\":"+slackUsername+", \"backend\":"+backend+",\"age\":"+age
-				+", \"bio\":"+bio;
+		return "{" +"\"slackUsername\":"+slackUsername+",  \"backend\":"+backend+",  \"age\":"+age
+				+",   \"bio\":"+bio+"}";
 	}
 	
 	
