@@ -33,7 +33,6 @@ public class MainController {
 
 
 	@GetMapping
-	@ResponseBody
 	public  String showModel(Model model) {
 		
 		model.addAttribute("view",modelClass);
